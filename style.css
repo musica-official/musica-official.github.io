@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 720px;
+    padding: 70px 8% 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+.description {
+    max-width: 450px;
+    color: #999;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: white;
+    color: black;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid #333;
+    color: white;
+}
+
+.secondary-button:hover {
+    background: #151515;
+}
+
+/* PHONE */
+
+.phone {
+    width: 280px;
+    height: 570px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 40px;
+    transform: rotate(5deg);
+    flex-shrink: 0;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    background: #111;
+    padding: 35px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-notch {
+    width: 80px;
+    height: 22px;
+    background: #050505;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.app-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.album {
+    width: 210px;
+    height: 210px;
+    margin: 60px auto 30px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #444,
+        #111
+    );
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.phone-screen h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.song {
+    color: #777;
+    font-size: 14px;
+}
+
+.progress {
+    height: 3px;
+    background: #333;
+    margin-top: 35px;
+    border-radius: 10px;
+}
+
+.progress span {
+    display: block;
+    width: 45%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    color: #aaa;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    border-radius: 50%;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 120px 8%;
+    border-top: 1px solid #181818;
+}
+
+.features h2,
+.download h2 {
+    font-size: clamp(38px, 5vw, 65px);
+    letter-spacing: -3px;
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 35px;
+    background: #101010;
+    border: 1px solid #1d1d1d;
+    border-radius: 25px;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.feature h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #777;
+    line-height: 1.6;
+}
+
+/* DOWNLOAD */
+
+.download {
+    padding: 150px 8%;
+    text-align: center;
+    border-top: 1px solid #181818;
+}
+
+.download h2 {
+    margin: 0 auto 25px;
+}
+
+.download > p:not(.small-title) {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 8%;
+    border-top: 1px solid #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: #555;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 6% 100px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .phone {
+        width: 250px;
+        height: 510px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        padding: 90px 6%;
+    }
+
+    .download {
+        padding: 100px 6%;
+    }
+
+    footer {
+        padding: 35px 6%;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    padding: 60px 8% 35px;
+    border-top: 1px solid #181818;
+    text-align: center;
+}
+
+footer > p {
+    color: #777;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.creator {
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid #181818;
+}
+
+.creator p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.creator a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.creator a:hover {
+    color: white;
+}
+
+.instagram-icon {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+.instagram-icon circle:last-child {
+    fill: currentColor;
+    stroke: none;
+}
